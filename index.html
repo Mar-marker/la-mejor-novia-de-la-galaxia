@@ -1,113 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acceso Privado 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para mi novia hermosa</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #ffdce5, #fff);
-    }
-    .container {
-      max-width: 400px;
-      margin: 100px auto;
-      background: #fff0f5;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      background: linear-gradient(#ffdee9, #b5fffc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
+      color: #333;
     }
-    input[type="password"] {
-      width: 80%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    button {
-      background-color: #d6336c;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .hidden {
-      display: none;
-    }
-    .mensaje, .carta {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      font-size: 1.1em;
-      color: #444;
+    header {
+      padding: 2rem;
+      background-color: #fff0f5;
     }
     h1 {
-      text-align: center;
-      color: #d6336c;
+      font-size: 2.5rem;
+      color: #e91e63;
     }
-    .falling-img {
-      position: absolute;
-      width: 50px;
-      animation: fall 10s linear infinite;
-      opacity: 0.8;
+    .mensaje {
+      max-width: 800px;
+      margin: 2rem auto;
+      font-size: 1.2rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-    @keyframes fall {
-      0% { top: -100px; transform: rotate(0deg); }
-      100% { top: 100vh; transform: rotate(360deg); }
+    .imagen {
+      margin: 2rem 0;
+    }
+    .imagen img {
+      max-width: 300px;
+      border-radius: 20px;
+    }
+    button {
+      padding: 1rem 2rem;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d81b60;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Feliz Día de la Novia 💖</h1>
+    <p>Mi niña hermosa, esto es para ti…</p>
+  </header>
 
-<div class="container" id="login">
-  <h2>Ingresa la contraseña 💌</h2>
-  <input type="password" id="password" placeholder="Contraseña">
-  <br>
-  <button onclick="checkPassword()">Entrar</button>
-</div>
-
-<div id="contenido" class="hidden">
-  <h1>Feliz Día de la Novia 💕</h1>
-  <div class="mensaje">
-    <p>Mi niña hermosa,</p>
-    <p>Hoy es un día muy especial: el Día de la Novia. Aunque la distancia nos impide abrazarnos como quisiéramos, quiero que sepas que mi corazón está más cerca del tuyo que nunca.</p>
-    <p>Desde aquel 22 de abril de 2025, el destino nos unió de una manera tan única que no he dejado de agradecer por ti. Ese día marcó el comienzo de algo hermoso… algo que sigue creciendo hoy en día, lleno de amor, paciencia y fe.</p>
-    <p>A pesar de la distancia, he aprendido a sentirte en cada mensaje, en cada llamada, en cada palabra tuya que llena mi alma. Porque no importa cuántos kilómetros nos separen, tú siempre estás en mí. En mis pensamientos, en mis planes, en mis sueños.</p>
-    <p>Mi niña hermosa, eres mi razón de ser, mi alegría, mi refugio en los días difíciles y mi inspiración constante. No hay un solo día en que no imagine cómo será tenerte cerca, y créeme: ese momento llegará.</p>
-    <p>Gracias por elegirme cada día, por ser tan auténtica, por darme un amor tan bonito. Hoy celebro que seas mi novia, pero más que eso, celebro que seas mi persona favorita en el mundo.</p>
-    <p>Feliz 1 de agosto, mi amor a distancia. Te amo más de lo que las palabras pueden expresar.</p>
-    <p style="text-align:right;">Con todo mi corazón ❤️</p>
-  </div>
-  <div class="carta">
-    <p>Gracias por ser tú, por cada risa, cada locura, cada pedacito de amor que me das sin medida. Cada día contigo, aunque sea a distancia, me llena el alma. Ya quiero tenerte cerquita para abrazarte y nunca soltarte. Te amo infinito 💖</p>
-  </div>
-  <img src="assets/manos_corazon.png" class="falling-img" style="left: 10%;" />
-  <img src="assets/manos_corazon.png" class="falling-img" style="left: 40%; animation-delay: 2s;" />
-  <img src="assets/manos_corazon.png" class="falling-img" style="left: 70%; animation-delay: 4s;" />
   <audio autoplay loop>
-    <source src="assets/only-love.mp3" type="audio/mpeg">
+    <source src="only-love.mp3" type="audio/mpeg">
   </audio>
-</div>
 
-<script>
-  function checkPassword() {
-    const password = document.getElementById("password").value;
-    if (password === "Mimimaf22042025") {
-      document.getElementById("login").style.display = "none";
-      document.getElementById("contenido").classList.remove("hidden");
-    } else {
-      alert("Contraseña incorrecta 💔");
-    }
-  }
-</script>
+  <div class="imagen">
+    <img src="manos-corazon.png" alt="Manos formando un corazón" />
+  </div>
 
+  <div class="mensaje">
+    <p>
+    Mi niña hermosa,<br><br>
+    Hoy es un día muy especial: el Día de la Novia. Aunque la distancia nos impide abrazarnos como quisiéramos, quiero que sepas que mi corazón está más cerca del tuyo que nunca.<br><br>
+    Desde aquel 22 de abril de 2025, el destino nos unió de una manera tan única que no he dejado de agradecer por ti. Ese día marcó el comienzo de algo hermoso… algo que sigue creciendo hoy en día, lleno de amor, paciencia y fe.<br><br>
+    A pesar de la distancia, he aprendido a sentirte en cada mensaje, en cada llamada, en cada palabra tuya que llena mi alma. Porque no importa cuántos kilómetros nos separen, tú siempre estás en mí. En mis pensamientos, en mis planes, en mis sueños.<br><br>
+    Mi niña hermosa, eres mi razón de ser, mi alegría, mi refugio en los días difíciles y mi inspiración constante. No hay un solo día en que no imagine cómo será tenerte cerca, y créeme: ese momento llegará.<br><br>
+    Gracias por elegirme cada día, por ser tan auténtica, por darme un amor tan bonito. Hoy celebro que seas mi novia, pero más que eso, celebro que seas mi persona favorita en el mundo.<br><br>
+    Feliz 1 de agosto, mi amor a distancia. Te amo más de lo que las palabras pueden expresar.<br><br>
+    Con todo mi corazón ❤️
+    </p>
+  </div>
+
+  <button onclick="document.getElementById('extraAudio').play()">Dale play a otra canción 🎶</button>
+  <audio id="extraAudio">
+    <source src="those-eyes.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
